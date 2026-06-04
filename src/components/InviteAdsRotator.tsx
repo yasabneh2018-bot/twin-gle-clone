@@ -55,7 +55,7 @@ export function InviteAdsRotator({ refCode }: { refCode: string }) {
   }, []);
 
   const share = () => {
-    const url = `https://t.me/${BOT_USERNAME}?start=${encodeURIComponent(refCode)}`;
+    const url = `https://t.me/${BOT_USERNAME}?startapp=${encodeURIComponent(refCode)}`;
     const msg = `🎮 Join me on Bingo! Play, win & earn. Use my link: ${url}`;
     const tg = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(msg)}`;
     window.open(tg, "_blank");
