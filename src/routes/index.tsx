@@ -430,14 +430,6 @@ function App() {
         <img src={logo} alt="Fast Bingo" className="h-20 w-auto" />
         <div className="splash-spinner" />
         <div className="text-primary font-bold tracking-wider text-sm">FAST BINGO</div>
-        <a
-          href="https://fastbingo-et.vercel.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs text-primary/80 underline underline-offset-2 hover:text-primary"
-        >
-          fastbingo-et.vercel.app
-        </a>
       </div>
     );
   }
@@ -3618,7 +3610,7 @@ function MeView({
 function InviteView({ user, t }: { user: User; t: (k: Key) => string }) {
   const refCode = (user as any).refCode || user.username;
   const profileId = ensureUserId6(user);
-  const url = `https://t.me/${BOT_USERNAME}?start=${encodeURIComponent(refCode)}`;
+  const url = `https://t.me/${BOT_USERNAME}?startapp=${encodeURIComponent(refCode)}`;
   const msg = `${t("inviteMsg")} ${refCode}`;
   const share = () => {
     const tg = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(msg)}`;
