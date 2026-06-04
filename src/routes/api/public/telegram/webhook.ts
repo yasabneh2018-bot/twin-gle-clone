@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { createHash, timingSafeEqual } from "crypto";
 
-const APP_URL = "https://eth-fastbingo.lovable.app";
+const APP_URL = "https://twin-gle-clone.lovable.app";
 
 function deriveSecret(token: string): string {
   return createHash("sha256").update(`tg-webhook:${token}`).digest("base64url");
@@ -139,7 +139,7 @@ async function sendOpenButton(
     chat_id: chatId,
     text: label,
     reply_markup: {
-      inline_keyboard: [[{ text: label, url }]],
+      inline_keyboard: [[{ text: label, web_app: { url } }]],
     },
   });
 }
