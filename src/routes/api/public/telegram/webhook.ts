@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { createHash, timingSafeEqual } from "crypto";
 
-const APP_URL = "https://twin-gle-clone.lovable.app";
+const APP_URL = "https://twin-gle-clone.vercel.app";
 
 function deriveSecret(token: string): string {
   return createHash("sha256").update(`tg-webhook:${token}`).digest("base64url");
